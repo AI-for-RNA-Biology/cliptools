@@ -1,0 +1,39 @@
+#
+# SPDX-FileCopyrightText: Copyright © 2025 Idiap Research Institute <contact@idiap.ch>
+# SPDX-FileCopyrightText: Copyright © 2026 University of Bern
+#
+# SPDX-FileContributor: Lisa Fournier <lisa.fournier@idiap.ch>
+# SPDX-FileContributor: Lisa Fournier <lisa.fournier@unibe.ch>
+#
+# SPDX-License-Identifier: GPL-3.0-only
+#
+
+[build-system]
+requires = ["poetry-core>=1.2.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "cliptools"
+version = "0.2.0"
+description = "Tools to analyze clip-sequencing data"
+authors = ["Lisa Fournier <lisa.fournier@unibe.ch>"]
+readme = "README.md"
+repository = "https://github.com/AI-for-RNA-Biology/cliptools"
+license = "GPL-3.0-only"
+packages = [{include = "cliptools"}] # editable mode
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.23.4"
+pandas = "^1.4.4"
+gtfparse = "^1.2.1"
+scipy = "^1.11.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+coverage = "^6.5.0"
+flake8 = "^6.1.0"
+pre-commit = "^2.20.0"
+pytest = "^7.2.0"
+pytest-mock = "^3.10.0"
+bandit = "^1.7.5"
